@@ -1,0 +1,596 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+em{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#Y-icon{
+    padding: 4px;
+    border-radius: 30px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+body{
+    background-color: rgb(161, 167, 173);
+    background: radial-gradient(
+        circle,
+        rgb(177, 177, 185) 0%,
+        rgb(174, 174, 180) 50%,
+        rgb(87, 87, 92)
+    );
+    padding: 17px;
+    display: flex;
+    justify-content: center;
+    /* width: max-content; */
+    /* height: max-content; */
+}
+
+.main-container{
+    width: 94%;
+}
+
+
+
+#change-color{
+    background-color: rgb(174, 174, 180);
+    border-radius: 5px;
+    padding: 5px;
+    width: max-content;
+    margin-bottom: 4px;
+    cursor: progress;
+}
+
+#reset-color{
+    background-color: rgb(174, 174, 180);
+    border-radius: 5px;
+    padding: 5px;
+    width: max-content;
+    margin-bottom: 4px;
+    cursor: progress;
+    display: none;
+}
+
+.title{
+    color: rgb(43, 42, 42);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.568);
+    padding: 13px;
+    border-radius: 5px;
+
+}
+
+
+.third-point{
+    position: relative;
+    animation-name: move_out;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes move_out{
+    30%{
+        left: 0%;
+    }
+
+    /* 40%{
+        left: 10px;
+    } */
+
+    100%{
+        left: 50px;
+    }
+
+}
+
+
+.second-point{
+    position: relative;
+    animation-name: movements;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes movements{
+    20%{
+        left: 0%;
+    }
+
+    /* 30%{
+        left: 10px;
+    } */
+
+    100%{
+        left: 35px;
+    }
+
+}
+
+.first-point{
+    position: relative;
+    animation-name: droping;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes droping{
+    0%{
+        left: 0%;
+    }
+
+    /* 10%{
+        left: 10px;
+    } */
+
+    100%{
+        left: 20px;
+    }
+
+}
+
+
+#reload_button{
+    background-color: rgb(74, 75, 77);
+    color: rgb(160, 158, 158);
+    border-radius: 5px;
+    padding: 4px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#title{
+    color: rgb(175, 174, 174);
+    font-size: 25px;
+}
+
+.container_one{
+    display: flex;
+}
+
+.container_two{
+    display: flex;
+}
+
+.box1_container{
+    background-color: rgb(44, 43, 43);
+    width: max-content;
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.section-one{
+    display: flex;
+    justify-content: right;
+    border-bottom: 1px solid rgb(161, 167, 173);
+    width: 100%;
+    line-height: 50px;
+    margin-bottom: 13px;
+}
+
+#my_user_image{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid rgb(48, 47, 47);
+    /* filter: opacity(1); */
+}
+
+
+input{
+    border-radius: 8px;
+    background-color: rgb(74, 75, 77);
+    color: rgb(156, 156, 156);
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
+.section-three{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(79, 80, 82);
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    height: max-content;
+}
+
+.third-container-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+i{
+    color: rgb(235, 235, 245);
+    font-size: 12px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+i:hover{
+    color: rgb(160, 158, 158);
+}
+
+.my-form-container{
+    width: max-content;
+    /* border: 1px solid #000; */
+    box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.568);
+    margin: 1rem 7px 0 7px;
+    padding: 6px;
+    border-radius: 7px;
+}
+
+#closing{
+    background-color: rgb(80, 81, 82);
+    border-radius: 4px;
+    height: max-content;
+    width: 60px;
+    text-align: center;
+}
+
+.second-container{
+    margin-top: 4rem;
+    background-color: rgb(44, 43, 43);
+    border-radius: 7px;
+    color: rgb(161, 167, 173);
+    padding: 7px;
+    margin-left: 5px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit-button{
+    padding: 4px;
+    background-color: rgb(44, 43, 43);
+    color: rgb(194, 196, 201);
+    border-radius: 4px;
+}
+
+#submit-button:hover{
+    background-color: rgb(104, 106, 109);
+}
+
+#closed{
+    background-color: rgb(80, 81, 82);
+    border-radius: 4px;
+    height: max-content;
+    width: 60px;
+    text-align: center;
+}
+
+.section-five{
+    margin-top: 2rem;
+    padding: 7px;
+    color: rgb(236, 233, 233);
+    border-radius: 7px;
+    background-color: rgb(54, 54, 54);
+}
+
+.a_section_five_class{
+    background-color: rgb(74, 75, 77);
+    border-radius: 7px;
+    width: max-content;
+}
+
+.my_error_message{
+    color: #fff;
+    background-color: rgb(189, 81, 95);
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.first-contact{
+    width: 68%;
+    background-color: rgb(161, 167, 173);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: inset 4px  1px 3px 2px rgb(35, 35, 36);
+    margin-bottom: 5px;
+}
+
+#available_contacts{
+    color: rgb(248, 245, 245);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 12px;
+    margin: 12px;
+    margin-bottom: 15px;
+}
+
+
+@media only screen and (min-width:990px){
+    body{
+        flex-direction: column;
+    }
+}
+
+
+/* ALL ABOUT ICONS */
+
+
+.trash-icon{
+    color: rgb(94, 35, 35);
+    background-color: rgb(241, 241, 245);
+    border-radius: 50%;
+    padding: 8px;
+    text-align: center;
+}
+
+.trash-icon:hover{
+    color: rgb(94, 35, 35);
+}
+
+.phone-icon{
+    color: rgb(94, 35, 35);
+    background-color: rgb(241, 241, 245);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.star-icon{
+    color: rgb(83, 81, 81);
+    width: max-content;
+    padding: 0;
+    margin-left: 0;
+}
+
+.star-icon:hover{
+    color: rgb(83, 81, 81);
+    color: rgb(221, 111, 8);
+    /* color: rgb(75, 24, 24); */
+}
+
+.checked{
+    color: rgb(197, 136, 21);
+}
+
+.photo-adding{
+    background-color: rgb(104, 106, 109);
+    color: #000;
+    padding: 4px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+h2{
+    cursor: progress;
+}
+
+.bg-dark{
+    background: none;
+    background-color: rgb(15, 15, 15);
+}
+
+.body-class-adding{
+    background-color: rgb(161, 167, 173);
+    background: radial-gradient(
+        circle,
+        rgb(177, 177, 185) 0%,
+        rgb(174, 174, 180) 50%,
+        rgb(87, 87, 92)
+    );
+}
+
+.active{
+    display: block;
+}
+
+#toggle{
+    display: none;
+}
+
+#toggle:checked{
+    background-color: rgb(46, 117, 189);
+    background: radial-gradient(
+        circle,
+        rgb(177, 177, 185) 0%,
+        rgb(174, 174, 180) 50%,
+        rgb(87, 87, 92)
+    );
+}
+
+.anchorTag a{
+    color: rgb(182, 89, 89);
+}
+/*-------Navigation Bar-------*/
+
+ul {
+    margin: 10px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(156, 156, 156);
+    border-radius: 8px;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bold;
+
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+}
+
+#nav-bar a:hover{
+    color: rgb(14, 13, 13);
+}
+
+#menu-icon{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+}
+
+#menu-icon:hover{
+    color: rgb(14, 13, 13);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#menu_container {
+    position: relative;
+    display: none;
+    animation-name: drop-down;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: inherit;
+    animation-direction: alternate;
+}
+
+
+@keyframes drop-down {
+
+    0%{
+        margin: 1px;
+    }
+
+    10%{
+        margin: 2px;
+    }
+
+    20%{
+        margin: 3px;
+    }
+
+    30%{
+        margin: 4px;
+    }
+
+    40%{
+        margin: 3px;
+    }
+    50%{
+        margin: auto;
+    }
+}
+
+
+@media only screen and (max-width : 600px){
+    body{
+        width: max-content;
+        height: 100%;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+    }
+    .third-point{
+        position: relative;
+        animation-name: move_out;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes move_out{
+        30%{
+            left: 0%;
+        }
+    
+        /* 40%{
+            left: 10px;
+        } */
+    
+        100%{
+            left: 12px;
+        }
+    
+    }
+    
+    
+    .second-point{
+        position: relative;
+        animation-name: movements;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes movements{
+        20%{
+            left: 0%;
+        }
+    
+        /* 30%{
+            left: 10px;
+        } */
+    
+        100%{
+            left: 10px;
+        }
+    
+    }
+    
+    .first-point{
+        position: relative;
+        animation-name: droping;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes droping{
+        0%{
+            left: 0%;
+        }
+    
+        /* 10%{
+            left: 10px;
+        } */
+    
+        100%{
+            left: 10px;
+        }
+    
+    }
+
+    ul{
+        flex-direction: column;
+        /* padding:  50px; */
+        width: max-content;
+        line-height: 30px;
+    }
+
+    li a {
+        text-decoration: none;
+        color: rgb(43, 42, 42);
+    }
+
+
+    li a:hover{
+        border-bottom: 1px solid rgb(36, 37, 37);
+        padding-bottom: 4px;
+    }
+
+    
+}
+
+
+
+
