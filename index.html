@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my_contact.css">
+    <!-- <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/d614fc8c85.js" crossorigin="anonymous"></script>
+    <title>Contact list</title>
+</head>
+<body>
+    <div class="main-container">
+    <label for="toggle">
+        <p id="change-color">Switch to Night Mode <span class="fa fa-moon"> </span></p>
+        <p id="reset-color">Switch to Day Mode <span class="fa fa-sun"> </span></p>
+    </label>
+    <input type="checkbox" id="toggle">
+    <p><em>Made By Yannick</em>&nbsp; <span id="Y-icon">Y</span> </p>
+    <h1 class="title" id="title-one">CONTACT LIST
+        <span class="points">
+            <span class="first-point">.</span>
+            <span class="second-point">.</span>
+            <span class="third-point">.</span>
+        </span>
+    </h1>
+
+    <div>
+        <button id="reload_button">Reload Page <i class="fas fa-sync-alt"></i> </button>   
+    </div><br><br>
+
+    <p id="menu-icon">Menu &nbsp; <span id="drop_down" class="fas fa-caret-down"></span></span></p><div><span id="angle-up" class="fas fa-angle-up"></span></div></span>
+    <div id="menu_container">
+        <nav id="nav-bar">
+        <ul>
+            <li><a href="./my_contact.html" id="menu">Home</a></li>
+            <li>
+                <a href="" id="menu displaySmallWindow">About me</a>
+                <div class="info_window"></div>
+            </li>
+            <li><a href="./login.html" id="menu">Login or Sign up</a></li>
+            <li><a href="" id="menu">My profil</a></li>
+        </ul>
+    </nav>
+    </div>
+
+
+    <div class="container_one">
+
+<!----------------Search bar erea------------------------------->
+
+    <div class="box1_container" id="box1-color">
+        <section class="section-one">
+            <div id="title">Contacts</div>
+            <i class="fa fa-plus" id="click-button">Add</i>
+        </section>
+        <section class="section-two">
+            <label for="text"></label>
+            <input type="text" id="filter-input" placeholder="Search names">
+        </section>
+        <section class="section-three" id="section-three">
+            <img src="./user image.png" alt="user picture" id="my_user_image">
+            <div id="myFile">
+                <h2>My File</h2>
+                <p id="contact-list"></p>
+                <p id="login"></p>
+            </div>
+           
+        </section>
+        
+    </div>
+    <div id="contact-window"></div>
+    <!--------------------Preventing Message------------------>
+    <div class="second-container" id="second-container">
+        <p>Please, provide right information in order to avoid
+           any possibility of access to your sensible informations
+        </p>
+        <i class="fa fa-times" id="closing"></i>
+    </div>
+    <section class="section-four" id="new-erea"></section>
+    </div>
+    <!-------------------------MY USEFUL FORM------------------->
+    <div class="container_two">
+        <div class="my-form-container" id="third-container">
+            <div class="third-container-title">
+                <h4>Fill these blancs to create <br> a new contact</h4>
+                <i class="fa fa-times" id="closed"></i>
+            </div>
+            <p id="error_message"></p>
+            <form id="my-form">
+                <div>
+                    <label for="name"><i class="fa fa-user"></i>&nbsp; &nbsp; Name</label>
+                    <input type="text" id="name" >
+                </div>
+                <div>
+                    <label for="email"><i class="fa fa-envelope"></i>&nbsp; &nbsp; email</label>
+                    <input type="text" id="email">
+                </div>
+                <div>
+                    <label for="Phone"><i class="fa fa-phone"></i>&nbsp; &nbsp; Phone number</label>
+                    <input type="tel" id="Phone">
+                </div>
+                <div>
+                    <button id="submit-button">Submit</button>
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+    <section class="section-five" id="section-five">
+        <h1 id="available_contacts">Available Contacts</h1>
+        <!-- <div class="first-contact">
+            <img src="./IMG_1829.jpg" alt="">
+            <p>Name : <span>Yannick</span></p>
+            <p>E-mail : <span>ymulikuza@gmail.com</span></p>
+            <p>Phone : <span>+250 783 020 147</span></p>
+        </div> -->
+    </section>
+    </div>
+    </div>
+    <script src="my_contact.js"></script>
+    <script>
+
+//----------------------------When switching to Night Mode-----------------------------------
+
+        const changeColor = document.getElementById("change-color");
+        const resetColor = document.getElementById("reset-color");
+        const checkboxInputTwo = document.querySelector('#toggle:checked') !== null
+
+        changeColor.addEventListener("click", color);
+        resetColor.addEventListener("click", colorReset);
+
+        function color(){
+           
+            //----------------------Adding Blackish color for Night chift After 4 sec of time interval---------------------
+
+           setTimeout(()=>{
+            document.body.style.background = "rgb(46, 45, 45)";
+            document.getElementById("title-one").style.color = "rgb(177, 177, 185)";
+            document.body.style.transition = "1s";
+            changeColor.style.cursor = "pointer";
+            changeColor.style.display = "none";
+            resetColor.style.display = "block";
+
+            //----------------------Editing Form's proportion while Night shift----------------------------
+
+            var myForm = document.getElementById("my-form");
+            myForm.style.backgroundColor = "rgb(174, 174, 180)";
+            myForm.style.padding = "5px";
+            myForm.style.borderRadius = "5px";
+
+
+            const loginContainer = document.getElementById("box1-color");
+            loginContainer.style.backgroundColor = "rgb(87, 87, 92)";
+
+            const erroMessaContainer = document.getElementById("second-container");
+            erroMessaContainer.style.backgroundColor = "rgb(87, 87, 92)";
+            erroMessaContainer.style.color = "#000";
+
+           
+           }, 4000);
+
+        }
+
+        
+        //---------------------------------Switching back to dayMode------------------------------------------
+
+        
+
+
+        function colorReset(){
+            if (document.querySelector('#toggle:checked') !== null){
+                document.body.style.backgroundColor = "rgb(174, 174, 180)";
+                document.getElementById("title-one").style.color = "#000";
+                changeColor.style.display = "block";
+                changeColor.style.backgroundColor = "rgb(87, 87, 92)";
+                changeColor.style.color = "#000";
+                resetColor.style.display = "none";
+                
+            }
+
+             //----------------When switching back to the day mode;-------------------------
+
+
+                changeColor.addEventListener('click', () =>{
+                    function color(){
+            
+
+                            setTimeout(()=>{
+                                document.body.style.background = "rgb(46, 45, 45)";
+                                document.getElementById("title-one").style.color = "rgb(177, 177, 185)";
+                                // document.body.style.backgroundColor = "black";
+                                document.body.style.transition = "1s";
+                                changeColor.style.cursor = "pointer";
+                                changeColor.style.display = "none";
+                                resetColor.style.display = "block";
+
+                                var myForm = document.getElementById("my-form");
+                                myForm.style.backgroundColor = "rgb(174, 174, 180)";
+                                myForm.style.padding = "5px";
+                                myForm.style.borderRadius = "5px";
+
+
+                                const loginContainer = document.getElementById("box1-color");
+                                loginContainer.style.backgroundColor = "rgb(87, 87, 92)";
+
+                                const erroMessaContainer = document.getElementById("second-container");
+                                erroMessaContainer.style.backgroundColor = "rgb(87, 87, 92)";
+                                erroMessaContainer.style.color = "#000";
+                            }, 4000);
+
+                    }
+                })
+        }
+
+        
+
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>
